@@ -14,7 +14,8 @@ $(document).ready(function() {
             	action: 'getStarted'
             }
 		}).done(function(data) {
-			$(data.message).dialog({
+            console.log(data);
+			$(data).dialog({
                 buttons:[
                     {
                         text: 'OK',
