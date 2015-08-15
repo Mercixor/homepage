@@ -8,8 +8,8 @@
 
 namespace content;
 
-
-class module
-{
-
+// Check if redirect target is set
+if (isset($_GET['target'])) {
+    echo 'Hallo';
 }
+echo 'dumm';

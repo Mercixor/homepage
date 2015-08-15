@@ -12,18 +12,9 @@ if(isset($_GET['action'])) {
 
 
 // Building the Content
-$button = new \libs\menuitems\Button('','buttonTest');
-$button->setContent('Testbutton');
-$mainDiv = new \libs\menuitems\DivContainer();
-$mainDiv->addChild($button);
-$nextButton = new \libs\menuitems\Button('','unterButton');
-$nextButton->setContent('Destroy');
-$secondDiv = new \libs\menuitems\DivContainer('unter');
-$secondDiv->addChild($nextButton);
-$mainDiv->addChild($secondDiv);
+
 
 // Building the page
 $mainpage = new MainpageFactory();
-$mainpage->setContent($mainDiv->buildHtml());
 echo $mainpage->getHtml();
 
