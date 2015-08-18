@@ -1,0 +1,11 @@
+{
+    "packages": [
+        "jquery"
+    ],
+    "js": [
+        "lan_vorbereitung.js"
+    ],
+    "css": [
+        "lan_vorbereitung.css"
+    ]
+}
