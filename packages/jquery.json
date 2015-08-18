@@ -1,0 +1,9 @@
+{
+    "js": [
+        "jquery-2.1.4.js",
+        "jquery_ui/jquery-ui.min.js"
+    ],
+    "css": [
+        "jquery-ui.min.css"
+    ]
+}

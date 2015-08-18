@@ -9,7 +9,9 @@ if(isset($_GET['action'])) {
     $response = $ajax->processRequest($_GET['action']);
     die();
 }
+// check if content for module.php
 
+include_once PATH_LIB . 'database_constants.php';
 
 // Building the Content
 
