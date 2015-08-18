@@ -27,7 +27,7 @@ class Autoloader {
 
         $className = str_replace($this->namespace . '\\', DIRECTORY_SEPARATOR, $className );
 
-        $file = ROOT_PATH . $className. '.php';
+        $file = PATH_ROOT . $className. '.php';
         if (file_exists($file)) {
             require_once $file;
         }
