@@ -4,6 +4,8 @@
         "jquery_ui/jquery-ui.min.js"
     ],
     "css": [
-        "jquery-ui.min.css"
+        "jquery-ui.min.css",
+        "jquery-ui.structure.min.css",
+        "jquery-ui.theme.min.css"
     ]
 }
