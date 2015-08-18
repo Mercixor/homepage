@@ -40,6 +40,14 @@ class WwwPackages {
                         echo '<link rel="stylesheet" type="text/css" href="'.$filePath.'">';
                     }
                     break;
+                case 'templates':
+                    // load template files
+                    foreach ($entry as $template) {
+                        $filePath = PATH_TPL . $template;
+                        if(file_exists($filePath)) {
+                            include_once $filePath;
+                        }
+                    }
             }
         }
     }
