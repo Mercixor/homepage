@@ -2,7 +2,7 @@
 use libs\MainpageFactory;
 use ajax\AjaxHandler;
 
-require_once 'config\bootstrap.php';
+require_once 'config'.DIRECTORY_SEPARATOR.'bootstrap.php';
 
 if(isset($_GET['action'])) {
     $ajax = new AjaxHandler();

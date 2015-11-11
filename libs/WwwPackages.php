@@ -2,6 +2,9 @@
 namespace libs;
 
 class WwwPackages {
+
+	const SERVER_PATH = '';
+	protected $homeServer;
     
     public static function loadPackages( $json_name ) {
         $filePath = PATH_PACKAGES . $json_name . '.json';
@@ -29,14 +32,16 @@ class WwwPackages {
                 case 'js':
                     // load js files
                     foreach($entry AS $js_file) {
-                        $filePath = $_SERVER['REQUEST_SCHEME']. '://' . $_SERVER ['HTTP_HOST'] . '/www/js/' . $js_file;
-                        echo '<script type="text/javascript" src="'.$filePath.'"></script>';
+                        $filePath = self::SERVER_PATH . '/www/js/' . $js_file;
+						//$filePath = PATH_JS . $js_file;
+                        echo '<script type="text/javascript" charset="utf-8" src="'.$filePath.'"></script>';
                     }
                     break;
                 case 'css':
                     // load css files
                     foreach($entry AS $css_file) {
-                        $filePath = $_SERVER['REQUEST_SCHEME']. '://'. $_SERVER ['HTTP_HOST'] . '/www/css/' . $css_file;
+                        $filePath = self::SERVER_PATH . '/www/css/' . $css_file;
+						//$filePath = PATH_CSS . $css_file;
                         echo '<link rel="stylesheet" type="text/css" href="'.$filePath.'">';
                     }
                     break;

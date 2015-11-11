@@ -1,5 +1,5 @@
 <?php
-require_once 'config\bootstrap.php';
+require_once 'config'.DIRECTORY_SEPARATOR.'bootstrap.php';
 // Check if redirect target is set
 if( isset($_GET['module']) ) {
     $extensionFile = PATH_CONTENT . $_GET['module'] . '.php';

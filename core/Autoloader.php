@@ -22,10 +22,10 @@ class Autoloader {
 
     public function loadClass( $className ) {
         if ( $this->namespace !== null ) {
-            $className = str_replace($this->namespace. '\\', '', $className);
+            $className = str_replace('\\', DIRECTORY_SEPARATOR, $className);
         }
 
-        $className = str_replace($this->namespace . '\\', DIRECTORY_SEPARATOR, $className );
+        $className = str_replace('\\', DIRECTORY_SEPARATOR, $className );
 
         $file = PATH_ROOT . $className. '.php';
         if (file_exists($file)) {

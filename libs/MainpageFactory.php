@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Mercix
- * Date: 14.07.2015
- * Time: 00:16
- */
-
 namespace libs;
 
 
