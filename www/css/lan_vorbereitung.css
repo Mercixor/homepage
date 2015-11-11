@@ -1,3 +1,56 @@
-fieldset {
+body {
+    background-color: #666;
+}
+
+#view_lan_vorbereitung_container {
     width: 50%;
+    margin-left: 25%;
+}
+
+.container_hide {
+    display: none;
+}
+
+#accordion_eigene_daten > label,#lan_vorbereitung_dialog_new_invite > label,
+#lan_vorbereitung_dialog_add_game > label{
+    margin: 5px;
+    width: 190px;
+    display: inline-block;
+}
+
+#accordion_eigene_daten > button {
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.lan_zusage, .lan_absage, .show_zusagen, .rank_up, .rank_down, .get_game_details{
+    width: 33px;
+    height: 20px;
+}
+
+.lan_vorbereitung_games {
+	width: 100%;
+}
+
+.lan_vorbereitung_termine {
+	width: 50%;
+}
+
+.lan_vorbereitung_games tr, .lan_vorbereitung_termine tr {
+	text-align: center;
+}
+
+.lan_vorbereitung_termine span {
+	text-align: center;
+	display: inline-block;
+}
+
+#lan_show_information label {
+	display: inline-block;
+	width: 220px;
+}
+
+#lan_termine_calendar {
+	float: right;
+	margin-top: -170px;
 }
