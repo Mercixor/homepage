@@ -1,0 +1,17 @@
+{
+    "packages": [
+        "jquery",
+        "icanhaz"
+    ],
+    "js": [
+        "lan_vorbereitung.js"
+    ],
+    "css": [
+        "lan_vorbereitung.css"
+    ],
+    "templates": [
+        "lan_vorbereitung/lan_vorbereitung_dialog.php",
+        "lan_vorbereitung/lan_vorbereitung_view.php",
+        "lan_vorbereitung/lan_vorbereitung_icanhaz.php"
+    ]
+}

@@ -1,32 +1,44 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Mercix
- * Date: 14.07.2015
- * Time: 00:16
- */
-
 namespace libs;
 
 
 class MainpageFactory
 {
     protected $content = '';
+    protected $menuPoints = array(
+        'News' => 'news',
+        'Testing' => 'testing',
+        'LAN Modul' => 'lan_vorbereitung'
+    );
 
     protected function buildHead() {
         $html = '<!DOCTYPE html>
                 <html>
                     <head>
-                        <link type="text/css" rel="stylesheet" href="js/jquery_ui/jquery-ui.css">
-                        <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
-                        <script type="text/javascript" src="js/jquery_ui/jquery-ui.js"></script>
-                        <script type="text/javascript" src="js/jsHandler.js"></script>
+                        <link type="text/css" rel="stylesheet" href="'. PATH_CSS .'/jquery_ui/jquery-ui.css">
+                        <script type="text/javascript" src="'. PATH_JS .'/jquery-2.1.4.js"></script>
+                        <script type="text/javascript" src="'. PATH_JS .'/jquery_ui/jquery-ui.js"></script>
+                        <script type="text/javascript" src="'. PATH_JS .'/jsHandler.js"></script>
                     </head>';
         return $html;
     }
 
+    protected function buildMenu() {
+        $html = '<div id="menu_box">';
+        foreach($this->menuPoints AS $menu => $link){
+            $html .= '<a href="http://' . $_SERVER['HTTP_HOST'] . '/module.php?module=' . $link . '">' . $menu .'</a><br />';
+        }
+        $html .= '</div>';
+        return $html;
+    }
+
     protected function buildBody() {
-        $html = '<body>' .$this->content. '</body>';
+        $html = '<body>
+                    <div id="content_container">' .
+                        $this->buildMenu(). '
+                        <div id="content">' . $this->content. '</div>
+                    </div>
+                 </body>';
         return $html;
     }
 
